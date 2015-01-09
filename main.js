@@ -3,8 +3,8 @@ $(document).ready(function() {
 
   $('.submit-btn').click(addNewTodo);
 
-  $(document).on('click', '.remove-todo', function() {
-    $(this).parent().remove();
+  $(document).on('click', '.todo-item', function() {
+    $(this).remove();
   });
 });
 
@@ -14,8 +14,7 @@ function showItemPreview() {
 
 function addNewTodo() {
   var newTodoTask = $('.new-todo-input').val()
-      , todoItemHTML = '<li class="todo-item">' + newTodoTask +
-                       '<a href="#" class="remove-todo">remove</a></li>';
+      , todoItemHTML = '<li class="todo-item"><a href="#">' + newTodoTask + '</a></li>';
 
   if (newTodoTask === '') return;
   $('.todo-item-preview').before(todoItemHTML);
