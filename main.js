@@ -12,7 +12,7 @@ function addNewTodo() {
                        '<a href="#" class="remove-todo">remove</a></li>';
 
   if (newTodoTask === '') return;
-  $('.todo-list').append(todoItemHTML);
+  $('.todo-list').prepend(todoItemHTML);
   $('.new-todo-task').val('');
   restrictSubmit();
 }
