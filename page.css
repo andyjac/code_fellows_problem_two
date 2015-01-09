@@ -10,4 +10,14 @@ body {
 
 .todo-list {
   text-align: left;
+  list-style-type: square;
+  font-size: 16px;
+}
+
+.remove-todo {
+  padding-left: 5px;
+}
+
+.todo-item {
+  padding: 5px 0;
 }
