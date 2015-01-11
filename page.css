@@ -18,6 +18,15 @@ body {
   padding-left: 5px;
 }
 
-.todo-item {
+.todo-item, .todo-item-preview {
   padding: 5px 0;
+}
+
+.todo-item a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #B33E3E;
 }
