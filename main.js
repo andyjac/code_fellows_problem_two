@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  $('.todo-item-preview').hide();
+
   $('.new-todo-input').keyup(showItemPreview);
 
   $('.submit-btn').click(addNewTodo);
@@ -7,10 +9,18 @@ $(document).ready(function() {
 });
 
 function showItemPreview() {
+  if ($('.new-todo-input').val() !== '') {
+    $('.todo-item-preview').show();
+  }
+  else {
+    $('.todo-item-preview').hide();
+  }
+
   $('.todo-item-preview').text($(this).val());
 }
 
 function addNewTodo() {
+  $('.todo-item-preview').hide();
   var newTodoTask = $('.new-todo-input').val()
       , todoItemHTML = '<li class="todo-item"><a href="#">' + newTodoTask + '</a></li>';
 
