@@ -29,6 +29,7 @@ body {
 
 .todo-item-preview {
   color: gray;
+  display: none;
 }
 
 a:hover {
