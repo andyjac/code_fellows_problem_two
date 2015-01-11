@@ -24,7 +24,11 @@ body {
 
 .todo-item a {
   text-decoration: none;
-  color: black;
+  color: inherit;
+}
+
+.todo-item-preview {
+  color: gray;
 }
 
 a:hover {
