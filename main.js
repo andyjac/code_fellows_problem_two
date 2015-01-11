@@ -3,9 +3,7 @@ $(document).ready(function() {
 
   $('.submit-btn').click(addNewTodo);
 
-  $(document).on('click', '.todo-item', function() {
-    $(this).remove();
-  });
+  $('html').on('click', '.todo-item', removeItem);
 });
 
 function showItemPreview() {
@@ -28,4 +26,8 @@ function restrictSubmit() {
     e.preventDefault();
     return;
   });
+}
+
+function removeItem() {
+  $(this).remove();
 }
