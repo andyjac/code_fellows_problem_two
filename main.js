@@ -20,9 +20,7 @@ function addNewTodo() {
 
   if (newTodoTask.trim() === '') return;
 
-  $('.todo-item-preview').css('display', 'none');
-  $('.todo-item-preview').before(todoItemHTML);
-  $('.todo-item-preview').text('');
+  $('.todo-item-preview').css('display', 'none').before(todoItemHTML);
   $('.new-todo-input').val('');
 
   restrictSubmit();
