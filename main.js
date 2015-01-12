@@ -5,10 +5,9 @@ $(document).ready(function() {
 });
 
 function showItemPreview() {
-  if ($('.new-todo-input').val() !== '') {
+  if ($('.new-todo-input').val().trim() !== '') {
     $('.todo-item-preview').css('display', 'list-item');
-  }
-  else {
+  } else {
     $('.todo-item-preview').css('display', 'none');
   }
 
@@ -16,14 +15,16 @@ function showItemPreview() {
 }
 
 function addNewTodo() {
-  $('.todo-item-preview').css('display', 'none');
   var newTodoTask = $('.new-todo-input').val()
       , todoItemHTML = '<li class="todo-item"><a href="#">' + newTodoTask + '</a></li>';
 
-  if (newTodoTask == '') return;
+  if (newTodoTask.trim() === '') return;
+
+  $('.todo-item-preview').css('display', 'none');
   $('.todo-item-preview').before(todoItemHTML);
   $('.todo-item-preview').text('');
   $('.new-todo-input').val('');
+
   restrictSubmit();
 }
 
